@@ -18,30 +18,31 @@
         <thead>
         <tr>
             <th>Title</th>
-            <th>Description</th>
             <th>Year</th>
             <th>Duration</th>
+            <th>Genre</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="movie: ${movies}">
             <td th:text="${movie.title}"/>
-            <td th:text="${movie.description}"/>
             <td th:text="${movie.year}"/>
             <td th:text="${movie.duration}"/>
+            <td th:text="${movie.genre}"/>
         </tr>
 
         </tbody>
     </table>
     <div>
-        <a href="create.html">
+        <a href="create">
             <button class="btn btn-primary">Create new movie</button>
         </a>
-        <a href="sesarch.html">
+        <a href="search">
             <button class="btn btn-primary">Search for movie</button>
         </a>
     </div>
 </div>
+
 
 <script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
 </body>

@@ -3,16 +3,16 @@ package com.example.demo;
 public class Movie {
 
    private String title;
-   private String description;
+   private String genre;
    private int year;
-   private int duration;
+   private String duration;
 
     public Movie() {
     }
 
-    public Movie(String title, String description, int year, int duration) {
+    public Movie(String title, int year, String duration, String genre) {
         this.title = title;
-        this.description = description;
+        this.genre = genre;
         this.year = year;
         this.duration = duration;
     }
@@ -25,12 +25,12 @@ public class Movie {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setGenre(String description) {
+        this.genre = genre;
     }
 
     public int getYear() {
@@ -41,11 +41,11 @@ public class Movie {
         this.year = year;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 }

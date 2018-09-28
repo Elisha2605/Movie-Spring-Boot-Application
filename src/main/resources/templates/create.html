@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <title>Create</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
+<div class="container">
+    <h1>Create a movie</h1>
+    <form method="Post" th:action="@{/create}">
+        <!-- <p>Enter student id</p>
+         <input   type="number" name="ID" th:field="${student.studentId}"  />-->
+        <p>Title :</p>
+        <input type="text" th:field="${movies.title}"/>
+        <p>Year :</p>
+        <input type="text" th:field="${movies.year}"/>
+        <p>Duration :</p>
+        <input type="date" th:field="${movies.duration}"/>
+        <p>Genre :</p>
+        <input type="text" th:field="${movies.genre}"/>
 
+        <input class="btn btn-primary" type="submit" value="Send"/>
+    </form>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
 </body>
 </html>
